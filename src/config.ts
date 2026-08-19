@@ -1,0 +1,7 @@
+export const languages=['pl','en','ru'] as const; export type Language=typeof languages[number];
+export const business={name:'AJO Auto Detailing Kraków',address:'ul. Mogilska 104, Kraków',phoneDisplay:'+48 661 964 487',phone:'tel:+48661964487',whatsapp:'https://wa.me/48661964487',facebook:'https://www.facebook.com/p/AJO-AutoDetailing-Krak%C3%B3w-100083397606379/',maps:'https://www.google.com/maps/search/?api=1&query=Mogilska+104+Krakow',rating:'4.9 ★'} as const;
+export const bodyTypes=['hatchback','sedan','suv'] as const; export type BodyType=typeof bodyTypes[number];
+export const serviceIds=['correction','ceramic','ppf','interior','upholstery','leather'] as const; export type ServiceId=typeof serviceIds[number];
+export const prices:Record<ServiceId,Record<BodyType,number>>={correction:{hatchback:900,sedan:1100,suv:1350},ceramic:{hatchback:1600,sedan:1850,suv:2200},ppf:{hatchback:2800,sedan:3000,suv:3400},interior:{hatchback:450,sedan:520,suv:620},upholstery:{hatchback:380,sedan:430,suv:520},leather:{hatchback:500,sedan:600,suv:720}};
+export const diagnosticAreas=['paint','front','body','trim','interiorArea','upholsteryArea','leatherArea'] as const; export type DiagnosticArea=typeof diagnosticAreas[number];
+export const recommendations:Record<DiagnosticArea,ServiceId[]>={paint:['correction','ceramic'],front:['ppf'],body:['ceramic','ppf'],trim:['ceramic'],interiorArea:['interior'],upholsteryArea:['upholstery'],leatherArea:['leather']};
